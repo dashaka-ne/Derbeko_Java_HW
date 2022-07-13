@@ -1,5 +1,6 @@
 package home_work_1;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class NameTwo {
@@ -9,10 +10,10 @@ public class NameTwo {
         String name = in.next();
         Object name1="Вася";
         Object name2="Анастасия";
-        if(!name1.equals(name)&&!name2.equals(name)){
+        if(!Objects.equals(name,name1)&&!Objects.equals(name,name2)){
             System.out.println("Добрый день, а вы кто?");
         }
-        else if (name1.equals(name)){
+        else if (Objects.equals(name,name1)){
             System.out.println("Привет!");
             System.out.println("Я тебя так долго ждал");
         }else

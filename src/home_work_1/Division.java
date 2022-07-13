@@ -12,7 +12,7 @@ public class Division {
             if (a%b==0){
             System.out.println("Если число "+a+" разделить на "+b+" получится "+ a/b);
             }else {
-                System.out.println("Число " + a + " не делится на число " + b);
+                System.out.println("Если число "+a+" разделить на "+b+" получится "+ a/b+" с остатком "+a%b);
             }
     }
 }
