@@ -14,8 +14,7 @@ public class NameTwo {
             System.out.println("Добрый день, а вы кто?");
         }
         else if (Objects.equals(name,name1)){
-            System.out.println("Привет!");
-            System.out.println("Я тебя так долго ждал");
+            System.out.println("Привет! \nЯ тебя так долго ждал");
         }else
         System.out.println("Я тебя так долго ждал");
     }

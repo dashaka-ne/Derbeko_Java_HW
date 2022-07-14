@@ -10,8 +10,7 @@ public class NameOne {
         Object name1="Вася";
         Object name2="Анастасия";
         if(Objects.equals(name,name1)){
-            System.out.println("Привет!");
-            System.out.println("Я тебя так долго ждал");
+            System.out.println("Привет!\nЯ тебя так долго ждал");
         }
         if(Objects.equals(name,name2)){
             System.out.println("Я тебя так долго ждал");
