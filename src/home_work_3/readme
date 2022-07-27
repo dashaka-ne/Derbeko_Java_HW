@@ -1,0 +1,11 @@
+Задание 1 - класс WithoutCalculatorMain
+Задание 2 - класс CalculatorWithOperator и CalculatorWithOperatorMain
+Задание 3 - класс CalculatorWithMathCopy и CalculatorWithMathCopyMain
+Задание 4 - класс CalculatorWithMathExtends и CalculatorWithMathExtendsMain
+Задание 5 - класс CalculatorWithCounterClassic и CalculatorWithCounterClassicMain
+Задание 6 - класс CalculatorWithCounterAutoSuper и CalculatorWithCounterAutoSuperMain
+Задание 7 - класс CalculatorWithCounterAutoComposite и CalculatorWithCounterDelegateCompositeMain
+Задание 8 - класс CalculatorWithCounterAutoAgregation и CalculatorWithCounterDelegateAgregationMain
+Задание 9 - класс CalculatorWithCounterAutoChoiceAgregation и CalculatorWithCounterDelegateChoiceAgregationMain
+Задание 10 - интерфейс ICalculator
+Задание 11- класс CalculatorWithCounterAutoAgregationInterface и класс CalculatorWithCounterAutoCompositeInterfaceMain
