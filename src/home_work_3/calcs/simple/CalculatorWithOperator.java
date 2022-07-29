@@ -10,8 +10,7 @@ public class CalculatorWithOperator implements ICalculator {
     //@param b слагаемое
     //@return возвращает сумму чисeл
     public double numbersAddition(double a, double b){
-        double c=a+b;
-        return c;
+        return a+b;
     }
 
     //метод numbersSubtraction  находит разницу чисел
@@ -19,8 +18,7 @@ public class CalculatorWithOperator implements ICalculator {
     //@param b вычитаемое
     //@return возвращает разность чисел
     public double numbersSubtraction(double a, double b){
-        double c=a-b;
-        return c;
+        return a-b;
     }
 
     //метод numbersDivision находит частное  чисел
@@ -28,8 +26,7 @@ public class CalculatorWithOperator implements ICalculator {
     //@param b делитель
     //@return возвращает частное чисeл
     public double numbersDivision(double a, double b) {
-        double c = a / b;
-        return c;
+        return a / b;
     }
 
     //метод numbersMultiplication находит произведение чисел
@@ -37,8 +34,7 @@ public class CalculatorWithOperator implements ICalculator {
     //@param b множитель
     //@return возвращает произведение чисeл
         public double numbersMultiplication(double a, double b) {
-            double c = a * b;
-            return c;
+            return a * b;
         }
 
     // метод numberExponentiation возводит число в степень
@@ -57,9 +53,8 @@ public class CalculatorWithOperator implements ICalculator {
     //@param a число
     //@return возвращает модуль числа
     public double numberModule(double a) {
-        if(a>=0){
-        }else{
-            a=a*(-2);
+        if(a<0){
+            a=a*(-1);
         }
         return a;
     }
@@ -68,8 +63,7 @@ public class CalculatorWithOperator implements ICalculator {
     //@param a число
     //@return квадратный корень
     public double numberSquareRoot(double a) {
-        double c=Math.sqrt(a);
-        return c;
+        return Math.sqrt(a);
     }
 
 

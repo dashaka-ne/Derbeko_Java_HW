@@ -4,7 +4,7 @@ import home_work_3.calcs.api.ICalculator;
 
 
 public class CalculatorWithCounterAutoAgregationInterface implements ICalculator {
-    private ICalculator calculator;
+    private final ICalculator calculator;
     private long countOperation;
 
     public CalculatorWithCounterAutoAgregationInterface (ICalculator calculator){

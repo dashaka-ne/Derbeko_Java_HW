@@ -5,7 +5,7 @@ import home_work_3.calcs.simple.CalculatorWithOperator;
 public class CalculatorWithCounterAutoComposite {
     private long countOperation=0;
 
-    private CalculatorWithOperator calculatorWithOperator;
+    private final CalculatorWithOperator calculatorWithOperator;
 
     public CalculatorWithCounterAutoComposite(){
         this.calculatorWithOperator= new CalculatorWithOperator();
@@ -83,6 +83,7 @@ public class CalculatorWithCounterAutoComposite {
     public void setCountOperation(long countOperation) {
         this.countOperation = countOperation;
     }
+
     //метод incrementCountOperation увеличивает внутренний счетчик в калькуляторе
     public void incrementCountOperation(){
         countOperation++;

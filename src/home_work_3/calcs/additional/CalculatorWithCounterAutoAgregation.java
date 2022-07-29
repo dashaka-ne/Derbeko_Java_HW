@@ -5,7 +5,7 @@ import home_work_3.calcs.simple.CalculatorWithOperator;
 
 public class CalculatorWithCounterAutoAgregation {
     private long countOperation=0;
-    private CalculatorWithOperator calculator;
+    private final CalculatorWithOperator calculator;
 
    public CalculatorWithCounterAutoAgregation(CalculatorWithOperator calculator){
 
