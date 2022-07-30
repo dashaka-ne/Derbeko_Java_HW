@@ -11,20 +11,20 @@ public class CalculatorWithMathExtends  extends CalculatorWithOperator implement
     //@param b степень
     //@return возвращает число возведенное в степен
     public double numberExponentiation(double a,int b) {
-        return super.numberExponentiation(a,b);
+        return Math.pow(a,b);
     }
 
     //метод numberModule находит модуль числа
     //@param a число
     //@return возвращает модуль числа
     public double numberModule(double a) {
-        return super.numberModule(a);
+        return Math.abs(a);
     }
 
     // метод numberSquareRootMath находит квадратный корень из числа
     //@param a число
     //@return квадратный корень
     public double numberSquareRoot(double a) {
-        return super.numberSquareRoot(a);
+        return Math.sqrt(a);
     }
 }
