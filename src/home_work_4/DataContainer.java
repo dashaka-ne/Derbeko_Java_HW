@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class DataContainer<T> {
     private T[] data;
 
-    DataContainer(T[]array){
+    public DataContainer(T[]array){
             this.data = array;
         }
 
@@ -103,10 +103,6 @@ public class DataContainer<T> {
             }
                 return false;
         }
-
-
-
-
 
 }
 
