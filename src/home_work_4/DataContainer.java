@@ -1,6 +1,7 @@
 package home_work_4;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 
 public class DataContainer<T> {
@@ -103,6 +104,27 @@ public class DataContainer<T> {
             }
                 return false;
         }
+
+
+         //метод сортирует элементы массива по убыванию
+         //@param передается компаратор
+          public void sort(Comparator<T> comparator){
+                for(int j=0;j< data.length;j++){
+                    if(data[j]!=null){
+                          for(int i=0;i<data.length-1;i++){
+                                 if(data[i+1]!=null){
+                                    if(comparator.compare(data[i],data[i+1])<0){
+                                    T c=data[i];
+                                    data[i]=data[i+1];
+                                    data[i+1]=c;
+                                    }
+                                 }
+                             }
+                    }
+
+                }
+          }
+
 
 }
 
