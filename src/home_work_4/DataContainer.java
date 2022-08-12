@@ -106,9 +106,10 @@ public class DataContainer<T> {
         }
 
 
-         //метод сортирует элементы массива по убыванию
-         //@param передается компаратор
-          public void sort(Comparator<T> comparator){
+        //Задание 9
+        //метод сортирует элементы массива по убыванию
+        //@param передается компаратор
+        public void sort(Comparator<T> comparator){   //принимает шаблон Comparator c  условным типом
                 for(int j=0;j< data.length;j++){
                     if(data[j]!=null){
                           for(int i=0;i<data.length-1;i++){
@@ -126,6 +127,22 @@ public class DataContainer<T> {
           }
 
 
+          // Задание 10
+          @Override
+          public String toString() {
+                final StringBuilder sb = new StringBuilder();
+                int j=0;
+                for(int i=0; i<data.length;i++){
+                      if(data[i]!=null){
+                           if(j>0){
+                               sb.append(',');
+                            }
+                        j++;
+                        sb.append(data[i]);;
+                    }
+                }
+                return sb.toString();
+            }
 }
 
 

@@ -1,7 +1,7 @@
 package home_work_4;
 import java.util.Comparator;
 
-class ComparatorMY  implements Comparator <Integer> {
+class ComparatorMy  implements Comparator <Integer> {
 
 
     @Override
