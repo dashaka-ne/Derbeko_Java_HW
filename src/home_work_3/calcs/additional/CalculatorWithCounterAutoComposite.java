@@ -8,6 +8,7 @@ public class CalculatorWithCounterAutoComposite {
     private final CalculatorWithOperator calculatorWithOperator;
 
     public CalculatorWithCounterAutoComposite(){
+
         this.calculatorWithOperator= new CalculatorWithOperator();
     }
 
