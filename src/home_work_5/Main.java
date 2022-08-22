@@ -34,7 +34,7 @@ public class Main {
         CreatureToDo.iteratorSpeed(persons);
         CreatureToDo.iteratorSpeed(animals);
 
-        //6.4.2.2 скорость заполнения коллекции
+        //6.4.2.2 скорость итерирования коллекции
         CreatureToDo.forISpeed(persons);
         CreatureToDo.forISpeed(animals);
 

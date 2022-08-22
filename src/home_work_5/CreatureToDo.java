@@ -24,8 +24,8 @@ public class CreatureToDo {
         long stop = System.currentTimeMillis();
         if (isSpeed) {
             System.out.println("Операция заполнения persons заняла " + (stop - start) + " мс");
+            System.out.println("Размер коллекции " + collection.size());
         }
-        System.out.println("1 Размер коллекции " + collection.size());//удалить потом
         return collection;
 
     }
@@ -147,7 +147,7 @@ public class CreatureToDo {
             itr.remove();
         }
         long stop = System.currentTimeMillis();
-        System.out.println("Операция итерирования iteratorSpeed заняла " + (stop - start) + " мс");
+        System.out.println("Размер коллекции после удаления" + collection.size());
     }
 }
 
