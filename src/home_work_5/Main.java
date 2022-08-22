@@ -4,19 +4,21 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        // List<Person> peopleCollection = new LinkedList<>();
-        List<Person> peopleCollection = new ArrayList<>();
-        // Set<Person> peopleCollection = new HashSet<>();
+        //List<Person> peopleCollection = new LinkedList<>();
+        //List<Person> peopleCollection = new ArrayList<>();
+        Set<Person> peopleCollection = new HashSet<>();
         CreatureToDo createCollection = new CreatureToDo();
 
         //List<Animal> animalCollection = new LinkedList<>();
-        List<Animal> animalCollection = new ArrayList<>();
-        // Set<Animal> animalCollection = new HashSet<>();
+        //List<Animal> animalCollection = new ArrayList<>();
+        Set<Animal> animalCollection = new HashSet<>();
         CreatureToDo createCollectionAnimal = new CreatureToDo();
 
         //6.1 и 6.2 заполнение коллекции рандомными значениями
-        List<Person> persons = createCollection.add(peopleCollection, false);
-        List<Animal> animals = createCollectionAnimal.addAnimal(animalCollection, false);
+        //List<Person> persons = createCollection.add(peopleCollection, false);
+        //List<Animal> animals = createCollectionAnimal.addAnimal(animalCollection, false);
+        Set<Person> persons = createCollection.add(peopleCollection, false);
+        Set<Animal> animals = createCollectionAnimal.addAnimal(animalCollection, false);
 
         //6.3.1 cортировка sort
         CreatureToDo.personSort(persons);
