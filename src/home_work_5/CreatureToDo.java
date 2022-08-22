@@ -1,8 +1,6 @@
 package home_work_5;
 
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 
 public class CreatureToDo {
@@ -12,7 +10,7 @@ public class CreatureToDo {
      * @param isSpeed определяет надо ли использовать функцию вывода в консоль скорости заполнения коллекции
      * @return коллекцию
      */
-    public List<Person> add(List collection, boolean isSpeed) {                             //если static то не смогу к полям обратиться
+    public List<Person> add(List<Person> collection, boolean isSpeed) {                             //если static то не смогу к полям обратиться
         long start = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
             Person person = new Person();
@@ -24,7 +22,6 @@ public class CreatureToDo {
         long stop = System.currentTimeMillis();
         if (isSpeed) {
             System.out.println("Операция заполнения persons заняла " + (stop - start) + " мс");
-            System.out.println("Размер коллекции " + collection.size());
         }
         return collection;
 
@@ -36,7 +33,7 @@ public class CreatureToDo {
      * @param isSpeed определяет надо ли использовать функцию вывода в консоль скорости заполнения коллекции
      * @return коллекцию
      */
-    public List<Animal> addAnimal(List collection, boolean isSpeed) {                             //если static то не смогу к полям обратиться
+    public List<Animal> addAnimal(List<Animal> collection, boolean isSpeed) {                             //если static то не смогу к полям обратиться
         long start = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
             Animal animal = new Animal();
@@ -147,7 +144,6 @@ public class CreatureToDo {
             itr.remove();
         }
         long stop = System.currentTimeMillis();
-        System.out.println("Размер коллекции после удаления" + collection.size());
     }
 }
 
