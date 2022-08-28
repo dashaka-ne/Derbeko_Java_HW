@@ -1,27 +1,32 @@
 package home_work_2.loop;
 
-import java.util.Scanner;
 
 public class LoopOne {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите число: ");
-        String value = in.next();
-        int number = Integer.parseInt(value, 10);
-        if (number < 1) {
-            System.out.println("Вы ввели отрицательное число или ноль. Попробуйте еще раз");
-        }else{
-            int i = 0;
-            int result = 1;
-            int j = 1;
-            System.out.print("1");
-            while (number > i && (j) < number) {
-                result = (number - i) * result;
-                i++;
-                System.out.print("*" + (j + 1));
-                j++;
-            }
-            System.out.println(" = " + result);
+    /**
+     * метод перемножает числа в полученном массиве
+     *
+     * @param arr массив
+     * @return произведение числе массива
+     */
+    public static long result(long[] arr) {
+        long result = 1;
+        for (int i = 0; i < arr.length; i++) {
+            result = result * arr[i];
         }
+        return result;
+    }
+
+    /**
+     * метод создает массив из целых чисел начиная с 1 c шагом 1 и размером number
+     *
+     * @param number размер массива
+     * @return массив
+     */
+    public static long[] createArr(int number) {
+        long[] array = new long[number];
+        for (int i = 0, j = 1; i < number; i++) {
+            array[i] = j + i;
+        }
+        return array;
     }
 }

@@ -11,27 +11,32 @@ public class Average {
         int b = in.nextInt();
         System.out.print("Input third number: ");
         int c = in.nextInt();
+    }
+
+    public static String avg(int a, int b, int c) {
+        String text;
         if (a > b && a > c) {
             if (b > c) {
-                System.out.print("Average number is: " + b);
+                text = ("Average number is: " + b);
             } else {
-                System.out.print("Average number is: " + c);
+                text = ("Average number is: " + c);
             }
         } else {
             if (b > a && b > c) {
                 if (a > c) {
-                    System.out.print("Average number is: " + a);
+                    text = ("Average number is: " + a);
                 } else {
-                    System.out.print("Average number is: " + c);
+                    text = ("Average number is: " + c);
                 }
             } else {
                 if (b > a) {
-                    System.out.print("Average number is: " + b);
+                    text = ("Average number is: " + b);
                 } else {
-                    System.out.print("Average number is: " + a);
+                    text = ("Average number is: " + a);
                 }
             }
         }
+        return text;
     }
 }
 

@@ -1,21 +1,21 @@
 package home_work_1;
 
-import java.util.Objects;
-import java.util.Scanner;
+import home_work_1.texts.Names;
 
-public class NameTwo {
-    public static void main(String[] args){
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите имя: ");
-        String name = in.next();
-        Object name1="Вася";
-        Object name2="Анастасия";
-        if(!Objects.equals(name,name1)&&!Objects.equals(name,name2)){
-            System.out.println("Добрый день, а вы кто?");
+import java.util.Objects;
+
+
+public class NameTwo implements ICommunicationPrinter {
+    @Override
+    public String welcome(String name) {
+        String greetingFinal;
+        if (!Objects.equals(name, Names.getName1()) && !Objects.equals(name, Names.getName2())) {
+            greetingFinal = GreetingUnknownPerson.getGreeting();
+        } else if (Objects.equals(name, Names.getName1())) {
+            greetingFinal = GreetingWaitHello.getGreeting();
+        } else {
+            greetingFinal = GreetingWait.getGreeting();
         }
-        else if (Objects.equals(name,name1)){
-            System.out.println("Привет! \nЯ тебя так долго ждал");
-        }else
-        System.out.println("Я тебя так долго ждал");
+        return greetingFinal;
     }
 }

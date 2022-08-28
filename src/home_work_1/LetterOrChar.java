@@ -1,23 +1,25 @@
 package home_work_1;
 
+import home_work_1.texts.LetterOrCharLetterText;
+import home_work_1.texts.LetterOrCharSymbolText;
+
 import java.util.Scanner;
 
 public class LetterOrChar {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите букву или спецсимвол: ");
+        System.out.print("Введите букву или символ: ");
         String string = in.next();
-        char item=string.charAt(0);
+    }
 
-        if(item>=040&&item<=0100){
-            System.out.println("Вы ввели спецсимвол");
-        }else if(item>=0133&&item<=0140){
-                System.out.println("Вы ввели спецсимвол");
-                 }else if(item>=0173&&item<=0177){
-                      System.out.println("Вы ввели спецсимвол");
-                         }
-                        else{
-                             System.out.println("Вы ввели букву");
-                        }
+    public static String text(String string) {
+        char item = string.charAt(0);
+        String text;
+        if (Character.isLetter(item) || Character.isUpperCase(item)) {
+            text = LetterOrCharLetterText.getText();
+        } else {
+            text = LetterOrCharSymbolText.getText();
+        }
+        return text;
     }
 }

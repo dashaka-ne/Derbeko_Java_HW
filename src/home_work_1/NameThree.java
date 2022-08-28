@@ -1,22 +1,19 @@
 package home_work_1;
 
-import java.util.Scanner;
-
-public class NameThree {
-    public static void main(String[] args){
-        Scanner in = new Scanner(System.in);
-        System.out.print("Введите имя: ");
-        String name = in.next();
-        switch (name){
+public class NameThree implements ICommunicationPrinter {
+    @Override
+    public String welcome(String name) {
+        String greetingFinal;
+        switch (name) {
             case "Вася":
-                System.out.println("Привет!");
-                System.out.println("Я тебя так долго ждал");
+                greetingFinal = GreetingWaitHello.getGreeting();
                 break;
             case "Анастасия":
-                System.out.println("Я тебя так долго ждал");
+                greetingFinal = GreetingWait.getGreeting();
                 break;
             default:
-                System.out.println("Добрый день, а вы кто?");
+                greetingFinal = GreetingUnknownPerson.getGreeting();
         }
+        return greetingFinal;
     }
 }
