@@ -76,6 +76,7 @@ public class CreatureToDo {
         }
         return collection;
     }
+
     /**
      * метод измеряет скорость итерирования коллекции при помощи Iterator
      *
@@ -120,11 +121,11 @@ public class CreatureToDo {
     }
 
     public static void personSort2(Set<Person> collection) {
-        List <Person> collectionList=new ArrayList<>(collection);
+        List<Person> collectionList = new ArrayList<>(collection);
         collectionList.sort(new ComparatorPasswordLengthNick());
-        HashSet <Person> collectionSet=new HashSet<>(collectionList);
+        HashSet<Person> collectionSet = new HashSet<>(collectionList);
         System.out.println("Сортировка Person при помощи компаратора ComparatorPasswordLength");
-        for (Person i: collectionSet) {
+        for (Person i : collectionSet) {
             System.out.println("Пароль: " + i.getPassword() + " Псевдоним: " + i.getNick() + " Имя: " + i.getName());
         }
 
@@ -144,11 +145,11 @@ public class CreatureToDo {
     }
 
     public static void personSort(Set<Person> collection) {
-        List <Person> collectionList=new ArrayList<>(collection);
+        List<Person> collectionList = new ArrayList<>(collection);
         collectionList.sort(new ComparatorPasswordLength());
-        HashSet<Person> collectionSet=new HashSet<>(collectionList);
+        HashSet<Person> collectionSet = new HashSet<>(collectionList);
         System.out.println("Сортировка Person при помощи компаратора ComparatorPasswordLength");
-        for (Person i: collectionSet) {
+        for (Person i : collectionSet) {
             System.out.println("Пароль: " + i.getPassword() + " Имя: " + i.getName());
         }
 
@@ -168,9 +169,9 @@ public class CreatureToDo {
     }
 
     public static void animalSort2(Set<Animal> collection) {
-        List <Animal> collectionList=new ArrayList<>(collection);
+        List<Animal> collectionList = new ArrayList<>(collection);
         collectionList.sort(new ComparatorAnimalAgeNick());
-        HashSet <Animal> collectionSet=new HashSet<>(collectionList);
+        HashSet<Animal> collectionSet = new HashSet<>(collectionList);
         System.out.println("Сортировка Animal при помощи компаратора ComparatorAnimalAgeNick");
         for (Animal i : collectionSet) {
             System.out.println("Возраст: " + i.getAge() + " Кличка:" + i.getNick());
@@ -191,9 +192,9 @@ public class CreatureToDo {
     }
 
     public static void animalSort(Set<Animal> collection) {
-        List <Animal> collectionList=new ArrayList<>(collection);
+        List<Animal> collectionList = new ArrayList<>(collection);
         collectionList.sort(new ComparatorAnimalAge());
-        HashSet <Animal> collectionSet=new HashSet<>(collectionList);
+        HashSet<Animal> collectionSet = new HashSet<>(collectionList);
 
         System.out.println("Сортировка Animal при помощи компаратора ComparatorAnimalAge");
         for (Animal i : collectionSet) {
@@ -214,6 +215,7 @@ public class CreatureToDo {
             itr.remove();
         }
         long stop = System.currentTimeMillis();
+        System.out.println("Операция удаления iteratorDel заняла " + (stop - start) + " мс");
     }
 }
 
