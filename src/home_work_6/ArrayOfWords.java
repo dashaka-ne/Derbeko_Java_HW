@@ -10,7 +10,7 @@ public class ArrayOfWords implements Serializable {
      * @return возвращает массив слов
      */
     public static String [] addArrayOfWords (String string) {
-        String[] words = string.split(" ");
+        String[] words = string.split("[ ,.!;:]+");
         return words;
     }
 }
