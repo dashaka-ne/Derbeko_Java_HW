@@ -11,6 +11,7 @@ public class SetOfWords {
      * @return коллекция с уникальными словами
      */
     public static Set <String> wordsToSet(String[] arrayOfWords){
+
         return new HashSet<>(Arrays.asList(arrayOfWords));
     }
  }

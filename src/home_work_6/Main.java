@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Read.toRead("HomeWork/src/warAndPeace.txt"));
+       // System.out.println(Read.toRead("HomeWork/src/warAndPeace.txt"));
         String s = Read.toRead("HomeWork/src/warAndPeace.txt");
 
         //массив из строк
@@ -32,7 +32,7 @@ public class Main {
         Sort.toSort(arrList);
 
         //вывести n записей
-        NRecords.records((arrList),1); //тут уже отсортированный список т.к. выше была сортировка
+        NRecords.records((arrList),5); //тут уже отсортированный список т.к. выше была сортировка
 
 
     }
