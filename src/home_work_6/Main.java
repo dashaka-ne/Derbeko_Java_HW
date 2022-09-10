@@ -11,6 +11,8 @@ public class Main {
 
         ISearchEngine reg = new RegExSearch();// для 5 задания
 
+        ISearchEngine dec = new SearchEnginePunctuationNormalizer(new RegExSearch());// для 5 задания
+
         //массив из строк
         String[] words = ArrayOfWords.addArrayOfWords(s);
         System.out.println(Arrays.toString(words));
@@ -44,5 +46,8 @@ public class Main {
         System.out.println("Повторений слова \"война\" " + reg.search(s, "война"));
         System.out.println("Повторений слова \"и\" " + reg.search(s, "и"));
 
+        System.out.println("Повторений слова \"мир\" " + dec.search(s, "мир"));
+        System.out.println("Повторений слова \"война\" " + dec.search(s, "война"));
+        System.out.println("Повторений слова \"и\" " + dec.search(s, "и"));
     }
 }

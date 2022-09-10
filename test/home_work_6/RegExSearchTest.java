@@ -52,4 +52,9 @@ class RegExSearchTest {
         assertEquals(1,count.search( " и ", "и"));
     }
 
+    @Test
+    public void checkSearch9(){
+        ISearchEngine count = new RegExSearch();
+        assertEquals(5,count.search( " мир! (мир мир; :анмир :мир мировой,   мировой! !!мир ", "мир"));
+    }
 }
