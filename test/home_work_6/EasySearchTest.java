@@ -32,7 +32,7 @@ class EasySearchTest {
     @Test
     public void checkSearch5(){
         ISearchEngine count=new EasySearch();
-        assertEquals(6,count.search(" мир мир: мир! мир- мир, мирный, немирный! мирр мир  ", "мир"));
+        assertEquals(6,count.search(" мир мир: мир! мир- мир, мирный, немирный!:;   мирр мир  ", "мир"));
     }
 
     @Test
@@ -51,9 +51,5 @@ class EasySearchTest {
         ISearchEngine count=new EasySearch();
         assertEquals(1,count.search( " и ", "и"));
     }
-    @Test
-    public void checkSearch9(){
-        ISearchEngine count=new EasySearch();
-        assertEquals(5,count.search( " мир! (мир мир; :анмир :мир мировой,   мировой! !!мир ", "мир"));
-    }
+
 }

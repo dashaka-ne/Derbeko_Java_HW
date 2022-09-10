@@ -17,6 +17,13 @@ public class SearchEnginePunctuationNormalizer implements ISearchEngine {
         return text.replaceAll("[\\s!,.:;]+", " ");
     }
 
+    /**
+     * метод подсчитывает количество слов в строке c учетом регистра слов
+     *
+     * @param text строка для подсчета
+     * @param word искомое слово
+     * @return количество искомых слов в строке
+     */
     @Override
     public long search(String text, String word) {
         return searchEngine.search(textNormalize(text), word);

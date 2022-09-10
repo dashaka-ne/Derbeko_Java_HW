@@ -13,6 +13,8 @@ public class Main {
 
         ISearchEngine dec = new SearchEnginePunctuationNormalizer(new RegExSearch());// для 5 задания
 
+        ISearchEngine registerIgnore=new SearchRegisterIgnore(new RegExSearch());// для 5 задания
+
         //массив из строк
         String[] words = ArrayOfWords.addArrayOfWords(s);
         System.out.println(Arrays.toString(words));
@@ -49,5 +51,10 @@ public class Main {
         System.out.println("Повторений слова \"мир\" " + dec.search(s, "мир"));
         System.out.println("Повторений слова \"война\" " + dec.search(s, "война"));
         System.out.println("Повторений слова \"и\" " + dec.search(s, "и"));
+
+        //5.2 поиск слова без учета регистра
+        System.out.println("Повторений слова \"мир\" " + registerIgnore.search(s, "мир"));
+        System.out.println("Повторений слова \"война\" " + registerIgnore.search(s, "война"));
+        System.out.println("Повторений слова \"и\" " + registerIgnore.search(s, "и"));
     }
 }

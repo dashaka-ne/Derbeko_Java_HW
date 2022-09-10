@@ -32,7 +32,7 @@ class RegExSearchTest {
     @Test
     public void checkSearch5(){
         ISearchEngine count = new RegExSearch();
-        assertEquals(6,count.search(" мир мир: мир! мир- мир, мирный, немирный! мирр мир  ", "мир"));
+        assertEquals(6,count.search(" мир мир: мир! мир- мир, мирный,    немирный!; мирр мир  ", "мир"));
     }
 
     @Test
@@ -50,11 +50,5 @@ class RegExSearchTest {
     public void checkSearch8(){
         ISearchEngine count = new RegExSearch();
         assertEquals(1,count.search( " и ", "и"));
-    }
-
-    @Test
-    public void checkSearch9(){
-        ISearchEngine count = new RegExSearch();
-        assertEquals(5,count.search( " мир! (мир мир; :анмир :мир мировой,   мировой! !!мир ", "мир"));
     }
 }
