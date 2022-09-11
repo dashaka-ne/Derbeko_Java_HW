@@ -8,7 +8,7 @@ public class SearchRegisterIgnore implements ISearchEngine {
     }
 
     /**
-     * метод подсчитывает количество слов в строке без учета регистра слова
+     * метод подсчитывает количество слов в строке без учета регистра слова если передан объект EasySearch
      *
      * @param text строка для подсчета
      * @param word искомое слово
@@ -16,7 +16,10 @@ public class SearchRegisterIgnore implements ISearchEngine {
      */
     @Override
     public long search(String text, String word) {
-
-        return searchEngine.search(text.toLowerCase(), word.toLowerCase());
+        if (searchEngine instanceof EasySearch) {
+            return searchEngine.search(text.toLowerCase(), word.toLowerCase());
+        } else {
+            return searchEngine.search(text, word);
+        }
     }
 }
