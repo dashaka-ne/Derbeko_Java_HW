@@ -13,14 +13,8 @@ public class RegExSearch implements ISearchEngine {
      */
     @Override
     public long search(String text, String word) {
-        final String REGEXP = "\\b" + Pattern.quote(word) + "\\b";
-        String blockToFind = String.format(REGEXP);
-        Pattern pattern = Pattern.compile(blockToFind);
+        Pattern pattern = Pattern.compile("\\b" + Pattern.quote(word) + "\\b");
         Matcher matcher = pattern.matcher(text);
-        int count = 0;
-        while (matcher.find()) {
-            count++;
-        }
-        return count;
+        return matcher.results().count();
     }
 }

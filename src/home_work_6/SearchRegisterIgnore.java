@@ -16,10 +16,10 @@ public class SearchRegisterIgnore implements ISearchEngine {
      */
     @Override
     public long search(String text, String word) {
-        if (searchEngine instanceof EasySearch) {
-            return searchEngine.search(text.toLowerCase(), word.toLowerCase());
-        } else {
+        if (searchEngine instanceof RegExSearch) {
             return searchEngine.search(text, word);
+        } else {
+            return searchEngine.search(text.toLowerCase(), word.toLowerCase());
         }
     }
 }

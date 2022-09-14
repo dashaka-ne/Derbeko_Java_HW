@@ -10,8 +10,7 @@ public class MapOfWords {
      * @param words массив из которого выбираются слова
      * @return коллецию MAP в которой ключ= слово из массива, значение=частота упоминаний слова
      */
-
-    public static Map<String,Long> mapCollection(String[] words) {
+    public static Map<String, Long> mapCollection(String[] words) {
         Map<String, Long> wordCount = new HashMap<>();
         for (String word : words) {
             wordCount.put(word, CountWord.toCountWord(word, words));

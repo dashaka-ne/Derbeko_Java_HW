@@ -16,17 +16,15 @@ public class EasySearch implements ISearchEngine {
             if (index == 0 && word.length() == 1) {
                 count++;
             } else if (index == 0 && word.length() > 0) {
-                boolean b2 = Character.isLetter(text.charAt(index + word.length()));
+                boolean b2 = isLetterSearch(index, word, text);
                 if (!b2) {
                     count++;
                 }
-            } else if (index == text.indexOf(text.length() - 1)) {
-                count++;
-            } else if (index + word.length() - 1 == text.length() - 1) {
+            } else if (index == text.indexOf(text.length() - 1) || index + word.length() - 1 == text.length() - 1) {
                 count++;
             } else {
                 boolean b1 = Character.isLetter(text.charAt(index - 1));
-                boolean b2 = Character.isLetter(text.charAt(index + word.length()));
+                boolean b2 = isLetterSearch(index, word, text);
                 if (!b1 && !b2) {
                     count++;
                 }
@@ -35,6 +33,10 @@ public class EasySearch implements ISearchEngine {
             index = text.indexOf(word);
         }
         return count;
+    }
+
+    private boolean isLetterSearch(int indexIn, String wordIn, String text){
+        return Character.isLetter(text.charAt(indexIn + wordIn.length()));
     }
 }
 

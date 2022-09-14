@@ -17,7 +17,6 @@ public class SearchEnginePunctuationNormalizer implements ISearchEngine {
         return text.replaceAll("[\\s!,.:;]+", " ");
     }
 
-
     /**
      * метод подсчитывает количество слов в строке c учетом регистра слов
      *

@@ -10,25 +10,20 @@ public class Read {
      *
      * @param path путь к файлу который должен быть вычитан
      */
-    public static String toRead(String path) {
-        FileReader fr = null;
-        StringBuilder sb = new StringBuilder();
+    public static String toRead(String path) throws FileNotFoundException {
+        FileReader fileReader = new FileReader(path);
+        StringBuilder stringBuilder = new StringBuilder();
         try {
-            fr = new FileReader(path);
-        } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден");
-        }
-        try {
-            int ch;
+            int a;
             do {
-                ch = fr.read();
-                if (ch != -1) {
-                    sb.append(Character.toChars(ch));
+                a = fileReader.read();
+                if (a != -1) {
+                    stringBuilder.append(Character.toChars(a));
                 }
-            } while (ch != -1);
+            } while (a != -1);
         } catch (IOException e) {
-            System.out.println("Что то пошло не так");
+            System.out.println("Что-то пошло не так");
         }
-        return sb.toString();
+        return stringBuilder.toString();
     }
 }

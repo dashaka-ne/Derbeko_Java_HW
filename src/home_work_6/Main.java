@@ -1,19 +1,20 @@
 package home_work_6;
 
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         String s = Read.toRead("HomeWork/warAndPeace.txt");
-        ISearchEngine string = new EasySearch();//для 5 задания
+        ISearchEngine iSearchEngineEasy = new EasySearch();//для 5 задания
 
-        ISearchEngine reg = new RegExSearch();// для 5 задания
+        ISearchEngine iSearchEngineReg = new RegExSearch();// для 5 задания
 
-        ISearchEngine dec = new SearchEnginePunctuationNormalizer(new RegExSearch());// для 5 задания
+        ISearchEngine iSearchEngineNorma = new SearchEnginePunctuationNormalizer(new RegExSearch());// для 5 задания
 
-        ISearchEngine registerIgnore=new SearchRegisterIgnore(new RegExSearch());// для 5 задания
+        ISearchEngine iSearchEngineIgnore = new SearchRegisterIgnore(new RegExSearch());// для 5 задания
 
         //массив из строк
         String[] words = ArrayOfWords.addArrayOfWords(s);
@@ -40,21 +41,21 @@ public class Main {
         NRecords.records((arrList), 5);
 
         // 5.1 поиск слова в строке с учетом регистра
-        System.out.println("Повторений слова \"мир\" " + string.search(s, "мир"));
-        System.out.println("Повторений слова \"война\" " + string.search(s, "война"));
-        System.out.println("Повторений слова \"и\" " + string.search(s, "и"));
+        System.out.println("Повторений слова \"мир\" " + iSearchEngineEasy.search(s, "мир"));
+        System.out.println("Повторений слова \"война\" " + iSearchEngineEasy.search(s, "война"));
+        System.out.println("Повторений слова \"и\" " + iSearchEngineEasy.search(s, "и"));
 
-        System.out.println("Повторений слова \"мир\" " + reg.search(s, "мир"));
-        System.out.println("Повторений слова \"война\" " + reg.search(s, "война"));
-        System.out.println("Повторений слова \"и\" " + reg.search(s, "и"));
+        System.out.println("Повторений слова \"мир\" " + iSearchEngineReg.search(s, "мир"));
+        System.out.println("Повторений слова \"война\" " + iSearchEngineReg.search(s, "война"));
+        System.out.println("Повторений слова \"и\" " + iSearchEngineReg.search(s, "и"));
 
-        System.out.println("Повторений слова \"мир\" " + dec.search(s, "мир"));
-        System.out.println("Повторений слова \"война\" " + dec.search(s, "война"));
-        System.out.println("Повторений слова \"и\" " + dec.search(s, "и"));
+        System.out.println("Повторений слова \"мир\" " + iSearchEngineNorma.search(s, "мир"));
+        System.out.println("Повторений слова \"война\" " + iSearchEngineNorma.search(s, "война"));
+        System.out.println("Повторений слова \"и\" " + iSearchEngineNorma.search(s, "и"));
 
         //5.2 поиск слова без учета регистра
-        System.out.println("Повторений слова \"мир\" " + registerIgnore.search(s, "мир"));
-        System.out.println("Повторений слова \"война\" " + registerIgnore.search(s, "война"));
-        System.out.println("Повторений слова \"и\" " + registerIgnore.search(s, "и"));
+        System.out.println("Повторений слова \"мир\" " + iSearchEngineIgnore.search(s, "мир"));
+        System.out.println("Повторений слова \"война\" " + iSearchEngineIgnore.search(s, "война"));
+        System.out.println("Повторений слова \"и\" " + iSearchEngineIgnore.search(s, "и"));
     }
 }

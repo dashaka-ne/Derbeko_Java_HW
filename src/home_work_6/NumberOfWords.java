@@ -1,4 +1,5 @@
 package home_work_6;
+
 import java.util.Set;
 
 public class NumberOfWords {
