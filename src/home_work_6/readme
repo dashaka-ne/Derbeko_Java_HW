@@ -1,7 +1,6 @@
-Задание 2.1- классы Array, Read, StringToWords, NumberOfWords;
+Задание 2.1- классы ArrayOfWords, Read, SetOfWords, NumberOfWords;
 Задание 2.2- классы Convert, Sort, ComparatorWord, NRecords;
 Задание 3- ISearchEngine;
-Задание 3.1 - интерфейс IEasySearch
 Задание 4.1 - класс EasySearch
 Задание 4.2 - класс RegExSearch
 Задание 4.3 - класс SearchEnginePunctuationNormalizer
