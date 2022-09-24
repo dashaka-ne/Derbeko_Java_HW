@@ -29,6 +29,9 @@ public class Read {
         } catch (IOException e) {
             System.out.println("Что то пошло не так");
         }
+        catch (NullPointerException e) {
+            System.out.println("Не найден файл для чтения");
+        }
         return sb.toString();
     }
 }
