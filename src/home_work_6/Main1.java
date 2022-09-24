@@ -1,7 +1,5 @@
 package home_work_6;
 
-import home_work_1.EnterAddress;
-
 public class Main1 {
     public static void main(String[] args) {
         ListOfBooks list= new ListOfBooks();

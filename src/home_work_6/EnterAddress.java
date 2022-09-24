@@ -1,7 +1,5 @@
 package home_work_6;
 
-import home_work_6.EnterFromConsole;
-
 import java.io.File;
 
 
