@@ -1,10 +1,11 @@
-Задание 2.1- классы ArrayOfWords, Read, SetOfWords, NumberOfWords;
-Задание 2.2- классы Convert, Sort, ComparatorWord, NRecords;
-Задание 3- ISearchEngine;
+Задание 2.1 - классы ArrayOfWords, Read, SetOfWords, NumberOfWords;
+Задание 2.2 - классы Convert, Sort, ComparatorWord, NRecords;
+Задание 3 - ISearchEngine;
 Задание 4.1 - класс EasySearch
 Задание 4.2 - класс RegExSearch
 Задание 4.3 - класс SearchEnginePunctuationNormalizer
 Задание 4.4 - класс SearchRegisterIgnore
 Задание 5 - в Main
-Задание 6 -  в test
+Задание 6 - в test
+Задание 7- Main1, ListOfBooks, EnterAddress, BookChoice,EnterFromConsole
 Задание 8 - Main2, CreateThread
