@@ -10,6 +10,7 @@ public class Sort {
      * @param arrayList коллекция для сортировки
      */
     public static void toSort(List<Map.Entry<String, Long>> arrayList) {
+
         arrayList.sort(new ComparatorWord());
     }
 }

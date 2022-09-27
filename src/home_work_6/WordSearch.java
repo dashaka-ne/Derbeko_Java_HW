@@ -1,6 +1,8 @@
 package home_work_6;
 
 public class WordSearch {
+    private static String userWord;
+
     /**
      * метод позволяет ввести слово через консоль
      *
@@ -8,6 +10,11 @@ public class WordSearch {
      */
     public static String wordToSearch() {
         System.out.println("Введите слово для поиска: ");
-        return EnterFromConsole.text();
+        userWord = EnterFromConsole.text();
+        return userWord;
+    }
+
+    public static String getUserWord() {
+        return userWord;
     }
 }

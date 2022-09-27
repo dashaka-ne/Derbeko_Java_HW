@@ -9,6 +9,7 @@ public class Read {
      * метод вычитывает файл  и помещает его в строку
      *
      * @param path путь к файлу который должен быть вычитан
+     * @return значение файла в строке
      */
     public static String toRead(String path) {
         FileReader fr = null;
@@ -28,8 +29,7 @@ public class Read {
             } while (ch != -1);
         } catch (IOException e) {
             System.out.println("Что то пошло не так");
-        }
-        catch (NullPointerException e) {
+        } catch (NullPointerException e) {
             System.out.println("Не найден файл для чтения");
         }
         return sb.toString();
