@@ -1,9 +1,12 @@
 package home_work_6;
+import java.io.IOException;
 
 public class Main1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String word;
-        do {
+        String wordToExit = "exit";
+        CreateFileToWrightResult.toWriteResultFile();
+                do {
             ListOfBooks list = new ListOfBooks();
             list.showListOfBooks(EnterAddress.giveMePath());//список книг
 
@@ -13,9 +16,9 @@ public class Main1 {
             Long number = string.search(s, WordSearch.wordToSearch());//возвращает количество повторений
             String bookName = BookChoice.getBookName();  // возвращает название файла
             word = WordSearch.getUserWord(); //возвращает слово которое ввел пользователь
-            if (!"exit".equals(word)) {
+            if (!wordToExit.equals(word)) {
                 SearchResult.writeResult(bookName, word, number);//запись в файл
             }
-        } while (!"exit".equals(word));
+        } while (!wordToExit.equals(word));
     }
 }

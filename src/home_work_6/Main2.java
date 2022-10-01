@@ -1,12 +1,14 @@
 package home_work_6;
 
+import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class Main2 {
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException {
+    public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException, IOException {
         String word;
+        CreateFileToWrightResult.toWriteResultFile();
         String wordToExit = "exit";
         do {
             ListOfBooks list = new ListOfBooks();
