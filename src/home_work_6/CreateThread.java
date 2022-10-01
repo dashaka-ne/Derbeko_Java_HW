@@ -12,7 +12,7 @@ public class CreateThread {
      * @return количество слов
      */
     public static Long createThread(String text, String word) throws ExecutionException, InterruptedException, TimeoutException {
-        ExecutorService executor = Executors.newFixedThreadPool(100);
+        ExecutorService executor = Executors.newFixedThreadPool(15);
         Future<Long> ft = executor.submit(() -> {
             System.out.println(Thread.currentThread().getName());
             return new EasySearch().search(text, word);
